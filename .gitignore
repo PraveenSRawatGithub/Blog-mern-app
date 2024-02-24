@@ -1,0 +1,8 @@
+# Node.js dependencies
+node_modules/
+
+# Client build
+client/build
+
+# Server dependencies
+server/node_modules/
