@@ -29,7 +29,7 @@ export default function Signup() {
     // console.log(userData);
     try { 
       setSpin(true);
-      let response = await axios.post('/signup', userData, {
+      let response = await axios.post('https://blog-mern-app-mwd5.onrender.com/signup', userData, {
         headers: {
           'Content-Type': 'application/json'
         }
@@ -57,8 +57,8 @@ export default function Signup() {
     return (
       <>
         <Navbar></Navbar>
-        <div className=" relative top-20 bg-white flex justify-center items-center">
-          <div className=" px-6 sm:px-8 pt-3 sm:pt-4 pb-6 sm:pb-8 border-2 text-center border-gray-200 rounded-lg shadow-lg w-[80%] md:w-[50%] lg:w-[35%] text-black" >
+        <div className=" relative top-20 bg-[#F8F8FF] flex justify-center items-center">
+          <div className=" px-6 bg-white sm:px-8 pt-3 sm:pt-4 pb-6 sm:pb-8 border-2 text-center border-gray-200 rounded-lg shadow-lg w-[80%] md:w-[50%] lg:w-[35%] text-black" >
             <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">Signup</h2>
             <div className="space-y-4">
               <div>

@@ -16,6 +16,7 @@ const Blog = () => {
         navigate('/blog', {
             state: {blog: nextBlog, blogs}
         })
+        window.scrollTo({top: 0, behavior: "smooth"});
     }
 
     return (
@@ -28,7 +29,7 @@ const Blog = () => {
                 <div className=" bg-[#F8F8FF] shadow-md rounded-lg sm:m-8 text-center md:w-[80%] lg:w-[70%] xl:w-[60%]">
                     <h2 className="text-xl lg:text-2xl font-bold text-gray-800 mb-4">{blog.title}</h2>
                     <div className=' flex justify-center items-center mb-2'>
-                        <img className='w-[90%] h-60 md:w-[80%] md:h-80 xl:w-[70%] shadow-xl shadow-gray-200' src={`/Images/${blog.image}`} alt='' />
+                        <img className='w-[90%] h-60 md:w-[80%] md:h-80 xl:w-[70%] shadow-xl shadow-gray-200' src={`https://blog-mern-app-mwd5.onrender.com/Images/${blog.image}`} alt='' />
                     </div>
                     <div className="p-4">
                         <div className=' flex justify-between'>

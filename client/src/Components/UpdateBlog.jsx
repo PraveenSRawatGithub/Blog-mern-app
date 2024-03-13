@@ -10,7 +10,7 @@ export default function UpdateBlog({blog, setUpdate, fetchBlogs}) {
     const handleUpdate = async() => {
         
         try{
-            let response = await axios.put(`/updateBlog/${blogId}`, {title, author, content})
+            let response = await axios.put(`https://blog-mern-app-mwd5.onrender.com/updateBlog/${blogId}`, {title, author, content})
             alert('blog updated successfully!')
             setUpdate(false);
             fetchBlogs();

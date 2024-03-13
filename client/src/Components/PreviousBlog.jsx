@@ -20,7 +20,7 @@ export default function PreviousBlog({ blogs, fetchBlogs }) {
         const isDelete = window.confirm('Do you want to delete this blog...');
         if (isDelete) {
             try {
-                await axios.delete(`/deleteBlog/${id}`);
+                await axios.delete(`https://blog-mern-app-mwd5.onrender.com/deleteBlog/${id}`);
                 // console.log(response.data);
                 alert('Blog deleted Successfully...');
                 fetchBlogs();
@@ -43,7 +43,7 @@ export default function PreviousBlog({ blogs, fetchBlogs }) {
                         {blogs.map(blog => (
                             <div key={blog._id} className="bg-white text-black px-4 sm:px-6 pb-4 pt-4 rounded-lg mb-4 shadow-md shadow-gray-400 w-full mx-4 md:w-80 lg:w-64 xl:w-96 my-3 md:mx-2">
                                 <div className=' flex justify-center items-center mb-2'>
-                                    <img className='w-full shadow-sm shadow-gray-400' src={`/Images/${blog.image}`} alt=''></img>
+                                    <img className='w-full shadow-sm shadow-gray-400' src={`https://blog-mern-app-mwd5.onrender.com/Images/${blog.image}`} alt=''></img>
                                 </div>
                                 <h3 className="text-lg font-bold  mb-2">{blog.title}</h3>
                                 <p className="text-gray-700 text-sm">{blog.content.split(" ").slice(0, 10).join(" ")}...</p>

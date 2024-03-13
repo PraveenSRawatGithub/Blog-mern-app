@@ -40,7 +40,7 @@ const Blog = () => {
   const fetchBlogs = async () => {
     setSpin(true);
     try {
-      const response = await axios.get(`/fetchBlogs/${category}`);
+      const response = await axios.get(`https://blog-mern-app-mwd5.onrender.com/fetchBlogs/${category}`);
       setBlogs(response.data);
       setSpin(false);
     } catch (error) {
@@ -98,7 +98,7 @@ const Blog = () => {
             {blogs.map(blog => (
               <div key={blog._id} className="border py-4 px-4 rounded-md bg-[#f5f4f4] shadow-md shadow-gray-400 ">
                 <div className=' flex justify-center items-center mb-2'>
-                  <img className='w-full' src={`/Images/${blog.image}`} alt=''></img>
+                  <img className='w-full' src={`https://blog-mern-app-mwd5.onrender.com/Images/${blog.image}`} alt=''></img>
                 </div>
                 <h2 className=" text-base sm:text-lg font-semibold mb-2">{blog.title}</h2>
                 <div className='bg-gray-300 mb-2 h-[0.01rem] w-full'></div>

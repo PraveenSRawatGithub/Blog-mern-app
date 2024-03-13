@@ -16,6 +16,8 @@ app.use(cors(
     }
 ))
 
+// app cors
+
 
 const DB = 'mongodb+srv://praveensinghrawat46:KsmwtchxT5g0jueA@cluster0.uewpwtk.mongodb.net/BlogApp?retryWrites=true&w=majority'
 mongoose.connect(DB).then(() => {

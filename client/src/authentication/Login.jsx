@@ -26,7 +26,7 @@ export default function Login() {
   const handleLogin = async () => {
     try {
       setSpin(true);
-      let response = await axios.post('/login', loginData, {
+      let response = await axios.post('https://blog-mern-app-mwd5.onrender.com/login', loginData, {
         headers: {
           'Content-Type': 'application/json'
         }
@@ -65,7 +65,7 @@ export default function Login() {
       <>
         <Navbar></Navbar>
         <div className=" relative top-20 flex justify-center items-center ">
-          <div className=" px-6 sm:px-8 pt-3 sm:pt-4 pb-6 sm:pb-8 text-center border-2 border-gray-200 rounded-lg shadow-lg  w-[80%] md:w-[50%] lg:w-[35%]" >
+          <div className=" px-6 sm:px-8 pt-3 bg-white sm:pt-4 pb-6 sm:pb-8 text-center border-2 border-gray-200 rounded-lg shadow-lg  w-[80%] md:w-[50%] lg:w-[35%]" >
             <h2 className="text-2xl md:text-3xl font-semibold mb-6 md:mb-8">Log In</h2>
             <div className="space-y-4">
               <div>
