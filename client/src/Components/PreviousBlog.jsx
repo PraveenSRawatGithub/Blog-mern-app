@@ -20,7 +20,7 @@ export default function PreviousBlog({ blogs, fetchBlogs }) {
         const isDelete = window.confirm('Do you want to delete this blog...');
         if (isDelete) {
             try {
-                await axios.delete(`https://blog-mern-app-mwd5.onrender.com/deleteBlog/${id}`);
+                await axios.delete(`/deleteBlog/${id}`);
                 // console.log(response.data);
                 alert('Blog deleted Successfully...');
                 fetchBlogs();

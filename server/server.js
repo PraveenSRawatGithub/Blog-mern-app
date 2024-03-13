@@ -1,20 +1,23 @@
+const path = require("path")
 const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 5000;
+
+const __dirname = path.resolve();
 
 const cookieParser = require('cookie-parser');
 const mongoose = require('mongoose');
 
 
-const cors = require('cors');
-// app.use(cors())
-app.use(cors(
-    {
-        origin: ["https://blogger-mern-app.netlify.app"],
-        methods: ["POST", "GET", "PUT", "DELETE"],
-        credentials: true
-    }
-))
+// const cors = require('cors');
+// // app.use(cors())
+// app.use(cors(
+//     {
+//         origin: ["https://blogger-mern-app.netlify.app"],
+//         methods: ["POST", "GET", "PUT", "DELETE"],
+//         credentials: true
+//     }
+// ))
 
 // app cors
 
@@ -51,14 +54,20 @@ app.use('/updateBlog', updateBlog)
 app.use('/deleteBlog', deleteBlog);
 app.use('/likes', updateLikes);
 
+app.use(express.static(path.join(__dirname, "/client/build")));
+
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+});
+
 app.get('/', (req, res) => {
     res.send("hello");
 })
 
 
-if(process.env.NODE_ENV == "production"){
-    app.use(express.static("client/build"))
-}
+// if(process.env.NODE_ENV == "production"){
+//     app.use(express.static("client/build"))
+// }
 
 
 app.listen(PORT, () => {

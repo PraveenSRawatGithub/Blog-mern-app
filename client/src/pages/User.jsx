@@ -27,7 +27,7 @@ export default function User() {
         // console.log('cookie value is: ', token);
         if (token !== null) {
             try {
-                const response = await axios.get('https://blog-mern-app-mwd5.onrender.com/fetchUserBlog', {
+                const response = await axios.get('/fetchUserBlog', {
                     headers: {
                         Authorization: `Bearer ${token}` // Include the token in the request headers
                     }

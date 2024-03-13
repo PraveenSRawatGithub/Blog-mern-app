@@ -26,7 +26,7 @@ export default function Login() {
   const handleLogin = async () => {
     try {
       setSpin(true);
-      let response = await axios.post('https://blog-mern-app-mwd5.onrender.com/login', loginData, {
+      let response = await axios.post('/login', loginData, {
         headers: {
           'Content-Type': 'application/json'
         }

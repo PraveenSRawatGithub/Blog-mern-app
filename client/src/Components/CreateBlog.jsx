@@ -66,7 +66,7 @@ export default function CreateBlog({ showBlogForm, setShowBlogForm, fetchBlogs }
         if (token !== null) {
             try {
 
-                const response = await axios.post('https://blog-mern-app-mwd5.onrender.com/createBlog', formData, {
+                const response = await axios.post('/createBlog', formData, {
                     headers: {
                         Authorization: `Bearer ${token}` // Include the token in the request headers
                     }

@@ -29,7 +29,7 @@ export default function Signup() {
     // console.log(userData);
     try { 
       setSpin(true);
-      let response = await axios.post('https://blog-mern-app-mwd5.onrender.com/signup', userData, {
+      let response = await axios.post('/signup', userData, {
         headers: {
           'Content-Type': 'application/json'
         }
